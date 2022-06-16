@@ -1,0 +1,25 @@
+<h1 id="heading" class="title text-center">Temperature Converter</h1>
+<div class="row">
+    <div class="col-lg-4 text-center" style="margin: auto;" >
+            <div class="form-group" id="formList">
+                <label for="exampleInputEmail1">Enter a number</label>
+                <input #num type="number" class="form-control"  saria-describedby="emailHelp" value=0>
+            </div>
+            <div class="form-check form-check-inline">
+                <input #op1 class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Convert to Centigrade
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input #op2 class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Covert to Fahrenheit
+                </label>
+              </div>
+        <div class="submit">
+            <button id="submitButton" class="btn btn-primary" (click)="onSubmit(num.value,(op1.checked?op1.value:op2.value))">Convert</button>
+        </div>
+        <h1 id="result" class="result text-center">{{display}}</h1>
+    </div>
+</div>
